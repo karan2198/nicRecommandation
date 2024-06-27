@@ -1,0 +1,22 @@
+/* Banners.css */
+.button-custom {
+    padding: 10px 57px; /* Adjust padding for a smaller button */
+    font-size: 16px; /* Adjust font size */
+    display: flex;
+    align-items: center; /* Align items in the center */
+    background-color: green; /* Use a visible color for debugging */
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button-custom svg {
+    margin-left: 10px; /* Add space between text and icon */
+    width: 20px; /* Set desired width */
+    height: 20px; /* Set desired height */
+  }
+  
+  .button-custom:hover {
+    background-color: darkgreen; /* Change to your primary color variable */
+  }
+  
