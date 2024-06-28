@@ -23,7 +23,7 @@ const RecommendationForm = ({ onRecommend, setLoading }) => {
     e.preventDefault();
     setLoading(true); // Show spinner immediately
     try {
-      const response = await axios.post('https://binding-ericka-karan2198-cdd3e94c.koyeb.app/recommend', formData);
+      const response = await axios.post('http://127.0.0.1:8000/recommend', formData);
       onRecommend(response.data.recommendations);
     } catch (error) {
       console.error('Error fetching recommendations:', error);

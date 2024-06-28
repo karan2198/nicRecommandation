@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -7,23 +8,21 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import pickle
 import asyncio
-import os
 
 app = FastAPI()
 
 # CORS Configuration
 origins = [
     "http://localhost",
-    "http://localhost:3000",  # Add the origin of your React frontend
-    "https://my-scheam-gov.vercel.app",
-    "https://my-scheam-o8ylu1eup-karan2198s-projects.vercel.app"
+    "http://localhost:3000",
+    "https://your-frontend-deployment-url.vercel.app",
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
@@ -129,4 +128,4 @@ async def recommend(request: RecommendationRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
