@@ -39,9 +39,23 @@ export default function Navbar() {
                   src="https://cdn.myscheme.in/images/logos/emblem-black.svg"
                   decoding="async"
                   className="border-0"
-                  style={{ height: '100%', objectFit: 'contain' }}
+                  style={{ height: '3.5rem', objectFit: 'contain' }}
                 />
               </a>
+              <h1 className="relative">
+                <button aria-label="Action Button" className="px-1 py-2.5 text-base rounded-md border-0 bg-transparent p-0 text-secondary hover:text-primary transition ease-in-out font-medium leading-none" style={{ height: '2.5rem' }}>
+                  <img
+                    // srcSet="https://cdn.myscheme.in/images/logos/myscheme-logo-black.svg 640w, https://cdn.myscheme.in/images/logos/myscheme-logo-black.svg 750w, https://cdn.myscheme.in/images/logos/myscheme-logo-black.svg 828w, https://cdn.myscheme.in/images/logos/myscheme-logo-black.svg 1080w, https://cdn.myscheme.in/images/logos/myscheme-logo-black.svg 1200w, https://cdn.myscheme.in/images/logos/myscheme-logo-black.svg 1920w, https://cdn.myscheme.in/images/logos/myscheme-logo-black.svg 2048w, https://cdn.myscheme.in/images/logos/myscheme-logo-black.svg 3840w"
+                    alt="myScheme"
+                    title="myScheme"
+                    sizes="100vw"
+                    src="/images/Nic_logo3-01.svg"
+                    decoding="async"
+                    className="border-0 mx-auto"
+                    style={{ height: '3.5rem', width: 'auto', objectFit: 'contain' }}
+                  />
+                </button>
+              </h1>
               <h1 className="relative">
                 <button aria-label="Action Button" className="px-1 py-2.5 text-base rounded-md border-0 bg-transparent p-0 text-secondary hover:text-primary transition ease-in-out font-medium leading-none" style={{ height: '2.5rem' }}>
                   <img
@@ -52,20 +66,10 @@ export default function Navbar() {
                     src="https://cdn.myscheme.in/images/logos/myscheme-logo-black.svg"
                     decoding="async"
                     className="border-0 mx-auto"
-                    style={{ height: '100%', objectFit: 'contain' }}
+                    style={{ height:"3.5rem", objectFit: 'contain', paddingTop:'6px' }}
                   />
                 </button>
               </h1>
-              <a target="_blank" className="normal-case" href="https://www.digitalindia.gov.in/" style={{ height: '2.5rem' }}>
-                <img
-                  srcSet="https://cdn.myscheme.in/images/logos/digital-india-black.svg 1x, https://cdn.myscheme.in/images/logos/digital-india-black.svg 2x"
-                  alt="Digital India Corporation"
-                  src="https://cdn.myscheme.in/images/logos/digital-india-black.svg"
-                  decoding="async"
-                  className="border-0"
-                  style={{ height: '100%', objectFit: 'contain' }}
-                />
-              </a>
             </div>
             <div className="flex items-center gap-3 w-full justify-end">
               <form className="group hidden md:flex items-center focus:outline-none w-full max-w-xl">
